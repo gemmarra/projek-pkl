@@ -1,0 +1,94 @@
+<?php
+                foreach($listPetugas as $row){
+                  echo '<option value="'.$row['id_petugas'].'">'.$row['nama_petugas'].'</option>';  
+                }
+              ?>
+
+public function tambah(){
+        // mengambil data kelas dan spp untuk komponen select
+        $data=[
+            'judulHalaman' =>'Penambahan Data Pemasangan',
+            'listPetugas'=>$this->petugas->getAllPetugas()
+        ];
+        
+        // memastikan keempat field dalam form  tidak dikosongkan
+        $validasiForm=[
+            'idPemasangan'=>'required',
+            'idPetugas'=>'required',
+            'idPelanggan'=>'required',
+            'namaPelanggan'=>'required',
+            'alamatPelanggan'=>'required',
+            'noTelepon'=>'required',
+            'pkbaPemasangan'=>'required',
+            'statusPemasangan'=>'required',
+            'tglPemasangan'=>'required'
+        ];
+
+        // jika tombol simpan ditekan
+        if($this->validate($validasiForm)){
+            $data=[
+				'id_pemasangan'=>$this->request->getPost('idPemasangan'),
+				'id_petugas'=>$this->request->getPost('idPetugas'),
+				'id_pelanggan'=>$this->request->getPost('idPelanggan'),
+				'nama_pelanggan'=>$this->request->getPost('namaPelanggan'),
+				'alamat'=>$this->request->getPost('alamatPelanggan'),
+				'no_telp'=>$this->request->getPost('noTelepon'),
+				'PKBA'=>$this->request->getPost('pkbaPemasangan'),
+				'status'=>$this->request->getPost('statusPemasangan'),
+				'tgl_pemasangan'=>$this->request->getPost('tglPemasangan')
+            ];
+
+            $cekRecord=$this->pemasangan->historyPemasanganId($data['id_pemasangan']);
+
+            if(isset($cekRecord[0]->id_pemasangan)){
+                $this->pemasangan->editPemasangan($data);
+            } else {
+                $this->pemasangan->simpan($data);
+            }
+
+            return redirect()->to('tampil-pemasangan');
+        }
+
+        return view('Pemasangan/tambah_pemasangan',$data);
+    }
+
+    public function edit($idpemasangan){
+        $data =[
+            'judulHalaman' =>'Perubahan Data Pemasangan',
+            'detailPemasangan'=>$this->pemasangan->cariHistory($idpemasangan),
+            'listPetugas'=>$this->petugas->getAllPetugas()
+        ] ;
+        return view('Pemasangan/tambah_pemasangan',$data);
+
+    }
+
+    
+$routes->get('/tambah-pemasangan', 'Pemasangan::tambah');
+$routes->post('/tambah-pemasangan', 'Pemasangan::tambah');
+
+$routes->get('/edit-pemasangan/(:num)', 'Pemasangan::edit/$1');
+$routes->post('/edit-pemasangan/(:num)', 'Pemasangan::tambah');
+
+$routes->get('/cari-pemasangan', 'Pemasangan::historyPemasangan');
+$routes->post('/cari-pemasangan', 'Pemasangan::historyPemasangan');
+
+<label class="switch">
+            <input type="checkbox" checked>
+            <span class="slider round"></span>
+            </label>
+
+BUTTON AKTIFIN NOTIF : <button onclick="enableNotif()"><i class="bi bi-bell"></i></button>\
+
+if (isset($_POST[submit])) {
+			$file = $_FILES['pkbaPemasangan'];
+            		$fileName = $_FILES['name'];
+		$fileTmpName = $_FILES['tmp_name'];
+		$fileSize = $_FILES['size'];
+		$fileError = $_FILES['error'];
+		$fileType = $_FILES['type'];
+
+		$fileExt = explode('.', $fileName);
+		$fileActualExt = strtolower(end($fileExt));
+
+		$allowed = array('jpg', 'jpeg', 'pdf', 'png');
+		}
