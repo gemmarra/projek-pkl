@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>PLN GERCEP</title>
+  </head>
+  <body>
+    <nav
+      class="navbar-desktop navbar bg-primary border-bottom border-body navbar-expand-lg"
+      data-bs-theme="dark"
+    >
+      <div class="container-fluid">
+        <a class="navbar-brand fw-bold" href="#">PLN GERCEP</a>
+        <ul class="nav justify-content-center">
+          <li class="nav-item">
+            <a class="nav-link text-light" href="list_pemasangan.html"
+              >Pemasangan</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light" href="list_petugas.html"
+              >Petugas Pemasangan</a
+            >
+          </li>
+        </ul>
+        <ul class="nav justify-content-end">
+          <li class="nav-item">
+            <a class="nav-link text-light" href="#">Tutorial</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light" href="#"
+              ><i class="bi bi-clock-history"></i
+            ></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <nav class="navbar-ponsel bg-primary">
+      <div class="container-fluid">
+        <ul class="nav justify-content-center">
+          <li class="nav-item">
+            <a class="nav-link text-light" href="#"
+              ><i class="bi bi-person-circle"></i
+            ></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light" href="#"
+              ><i class="bi bi-clipboard-check"></i
+            ></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light" href="#"
+              ><i class="bi bi-question-circle"></i
+            ></a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link text-light" href="#"
+              ><i class="bi bi-clock-history"></i
+            ></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <section class="myform">
+      <h1>Penambahan Data Pemasangan</h1>
+      <form action="" method="post" class="form-pemasangan">
+        <div class="form-1">
+          <div class="input">
+            <label for="form-label">ID Pemasangan</label>
+            <div>
+              <input
+                type="text"
+                name="idPemasangan"
+                id="disabledInput"
+                class="form-control"
+                disabled
+              />
+            </div>
+          </div>
+          <div class="input">
+            <label for="form-label">ID Petugas</label>
+            <div>
+              <input type="text" name="idPetugas" id="" class="form-control" />
+            </div>
+          </div>
+          <div class="input">
+            <label for="form-label">ID Pelanggan</label>
+            <div>
+              <input
+                type="text"
+                name="idPelanggan"
+                id=""
+                class="form-control"
+              />
+            </div>
+          </div>
+          <div class="input">
+            <label for="form-label">Nama Pelanggan</label>
+            <div>
+              <input
+                type="text"
+                name="namaPelanggan"
+                id=""
+                class="form-control"
+              />
+            </div>
+          </div>
+          <div class="input">
+            <label for="form-label">Alamat</label>
+            <div>
+              <textarea
+                type="text"
+                name="alamatPelanggan"
+                id=""
+                class="form-control"
+              ></textarea>
+            </div>
+          </div>
+        </div>
+        <div class="form-2">
+          <div class="input">
+            <label for="form-label">No Telepon</label>
+            <div>
+              <input type="text" name="noTelepon" id="" class="form-control" />
+            </div>
+          </div>
+          <div class="input">
+            <label for="form-label">PKBA</label>
+            <div>
+              <input
+                type="file"
+                name="pkbaPemasangan"
+                id=""
+                class="form-control"
+              />
+            </div>
+          </div>
+          <div class="input">
+            <label for="form-label">Status</label>
+            <div class="radio">
+              <input
+                type="radio"
+                name="statusPemasangan"
+                id=""
+                value="Belum Selesai"
+                disabled
+                checked
+              />
+              Belum Selesai
+              <br />
+              <input
+                type="radio"
+                name="statusPemasangan"
+                id=""
+                value="Selesai"
+                disabled
+              />
+              Selesai
+            </div>
+          </div>
+          <div class="input">
+            <label for="form-label">Tanggal Pemasangan</label>
+            <div>
+              <input type="datetime-local" name="" id="" />
+            </div>
+          </div>
+          <br />
+          <button type="submit" class="btn btn-primary">Simpan</button>
+        </div>
+      </form>
+    </section>
+  </body>
+</html>

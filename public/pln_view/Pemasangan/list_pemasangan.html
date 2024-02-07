@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>PLN GERCEP</title>
+  </head>
+  <body>
+    <div
+      class="modal fade"
+      id="pkbaModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">...</div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <nav
+      class="navbar-desktop navbar bg-primary border-bottom border-body navbar-expand-lg"
+      data-bs-theme="dark"
+    >
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">PLN GERCEP</a>
+        <ul class="nav justify-content-center">
+          <li class="nav-item nav-pemasangan">
+            <a class="nav-link text-light" href="list_pemasangan.html"
+              >Pemasangan</a
+            >
+          </li>
+          <li class="nav-item nav-petugas">
+            <a class="nav-link text-light" href="list_petugas.html"
+              >Petugas Pemasangan</a
+            >
+          </li>
+        </ul>
+        <ul class="nav justify-content-end">
+          <li class="nav-item">
+            <a class="nav-link text-light" href="#">Tutorial</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light" href="history.html"
+              ><i class="bi bi-clock-history"></i
+            ></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <nav class="navbar-ponsel bg-primary">
+      <div class="container-fluid">
+        <ul class="nav d-flex justify-content-evenly">
+          <li class="nav-item">
+            <a class="nav-link text-light" href="#"
+              ><i class="bi bi-clipboard-check"></i
+            ></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light" href="#"
+              ><i class="bi bi-question-circle"></i
+            ></a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link text-light" href="#"
+              ><i class="bi bi-clock-history"></i
+            ></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <section class="mytable">
+      <h1>Data Pemasangan</h1>
+      <a href="tambah_pemasangan.html" class="btn btn-primary btn-tambah"
+        ><i class="bi bi-plus-lg"></i> Tambah</a
+      >
+      <div class="table-responsive">
+        <table class="table table-hover table-bordered">
+          <thead class="table-light">
+            <tr>
+              <th scope="col">No</th>
+              <th scope="col">ID Petugas</th>
+              <th scope="col">ID Pelanggan</th>
+              <th scope="col">Nama Pelanggan</th>
+              <th scope="col">Alamat</th>
+              <th scope="col">No. Telepon</th>
+              <th scope="col">PKBA</th>
+              <th scope="col">Status</th>
+              <th scope="col">Tanggal Pemasangan</th>
+              <th scope="col">Aksi</th>
+            </tr>
+          </thead>
+          <tbody>
+            <td>Anjay</td>
+            <td>Anjay</td>
+            <td>Anjay</td>
+            <td>Anjay</td>
+            <td>Anjay</td>
+            <td>Anjay</td>
+            <td>
+              <a
+                href=""
+                class="btn btn-secondary"
+                data-bs-toggle="modal"
+                data-bs-target="#pkbaModal"
+                ><i class="bi bi-file-earmark-image"></i
+              ></a>
+            </td>
+            <td>Anjay</td>
+            <td>Anjay</td>
+            <td>
+              <a href="" class="btn btn-danger"><i class="bi bi-trash"></i></a>
+              <a href="" class="btn btn-primary"><i class="bi bi-pen"></i></a>
+              <a href="" class="btn btn-success"
+                ><i class="bi bi-check2-circle"></i> Selesai</a
+              >
+            </td>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="table-responsive-sm">
+        <table class="table table-hover table-bordered">
+          <thead class="table-light">
+            <tr>
+              <th scope="col">No</th>
+              <th scope="col">ID Petugas</th>
+              <th scope="col">ID Pelanggan</th>
+              <th scope="col">Nama Pelanggan</th>
+              <th scope="col">PKBA</th>
+              <th scope="col">Status</th>
+              <th scope="col">Aksi</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Anjay</td>
+              <td>Anjay</td>
+              <td>
+                <a href="" class="btn btn-secondary text-align-center"
+                  ><i class="bi bi-file-earmark-image"></i
+                ></a>
+              </td>
+              <td>Anjay</td>
+              <td>Anjay</td>
+              <td>
+                <a href="" class="btn btn-success"
+                  ><i class="bi bi-check2-circle"></i
+                ></a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </body>
+</html>
